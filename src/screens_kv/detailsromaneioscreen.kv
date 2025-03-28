@@ -1,0 +1,27 @@
+<DetailsRomaneioScreen>:
+    name: "detais-romaneio"
+    md_bg_color: app.theme_cls.backgroundColor
+
+    CustomTopAppBar:
+
+        CustomTopAppBarLeadingButtonContainer:
+            CustomButtonIcon:
+                icon: "chevron-left"
+                on_release: app.root.change_screen("romaneios-bitolado", "right")
+
+        CustomTopAppBarTitle:
+            text: "Detelhes do romaneio"
+            bold: True
+            
+            
+        CustomTopAppBarTrailingButtonContainer:
+            CustomButtonIcon:
+                icon: "theme-light-dark"
+                on_release: app.change_theme()
+
+    # Fim da app bar...
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        # Inicio app bar...

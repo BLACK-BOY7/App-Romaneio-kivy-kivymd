@@ -1,0 +1,139 @@
+<RomaneiosScreen>:
+    name: "romaneios-bitolado"
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        CustomTopAppBar:
+            pos_hint: {"center_x": 0.5, "top": 1}
+
+            CustomTopAppBarLeadingButtonContainer:
+                CustomButtonIcon:
+                    icon: "chevron-left"
+                    on_release: app.root.change_screen("home", "right")
+
+            CustomTopAppBarTitle:
+                text: "Romaneios"
+                bold: True
+
+        RomaneioWidgetFilter:
+
+        ScrollView:
+            effect_cls: "ScrollEffect"
+            RomaneiosWidgets:
+
+    MDButton:
+        style: "elevated"
+        radius: dp(8)
+        pos_hint: {"right": 0.98, "top": 0.10}
+
+        on_release: app.root.change_screen("create-romaneio")
+        MDButtonIcon:
+            icon: "plus"
+
+        MDButtonText:
+            text: "Novo"
+            bold: True
+
+
+<RomaneiosWidgets>:
+    spacing: dp(2)
+    padding: dp(2)
+
+
+<RomaneioWidgetInfo>:
+    radius: dp(4)
+    on_release: app.root.change_screen("detais-romaneio")
+
+    MDListItemLeadingIcon:
+        icon: "notebook-edit"
+
+    MDListItemHeadlineText:
+        text: "Andrey"
+
+    MDListItemSupportingText:
+        text: "Maçaranduba"
+
+    MDListItemTertiaryText:
+        text: "10/05/2085"
+
+    MDListItemTrailingIcon:
+        icon: "chevron-right"
+
+
+<RomaneioWidgetFilter>:
+    orientation: "horizontal"
+
+    theme_bg_color: "Custom"
+    md_bg_color: "131318"
+
+    size_hint_y: None
+    size_hint_x: 0.99
+    focus_behavior: False
+    height: dp(46)
+    padding: dp(2)
+    spacing: dp(2)
+    
+    radius: root._radius
+
+    pos_hint: {'center_x': 0.5}
+
+    MDIcon:
+        icon: "filter"
+        pos_hint: {'center_y': 0.5}
+
+    MDBoxLayout:
+        padding: dp(1)
+        spacing: dp(1)
+
+        MDButton:
+            style: "outlined"
+            theme_width: "Custom"
+            size_hint_x: 0.28
+            radius: [dp(8), dp(0), dp(0), dp(8)]
+
+            pos_hint: {'center_y': 0.5}
+
+            MDButtonText:
+                text: "Especie"
+
+                bold: True
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        MDButton:
+            style: "outlined"
+            theme_width: "Custom"
+            size_hint_x: 0.28
+            radius: dp(0)
+            pos_hint: {'center_y': 0.5}
+
+            MDButtonText:
+                text: "Cliente"
+
+                bold: True
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        MDButton:
+            style: "outlined"
+            theme_width: "Custom"
+            size_hint_x: 0.28
+            radius: dp(0)
+            pos_hint: {'center_y': 0.5}
+
+            MDButtonText:
+                text: "Data"
+
+                bold: True
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        MDButton:
+            style: "outlined"
+            theme_width: "Custom"
+            size_hint_x: 0.16
+            radius: [dp(0), dp(8), dp(8), dp(0)]
+            pos_hint: {'center_y': 0.5}
+
+            MDButtonIcon:
+                icon: "close"
+                
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
