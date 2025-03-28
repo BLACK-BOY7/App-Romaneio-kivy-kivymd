@@ -1,8 +1,6 @@
-#: import ThemedButton src.custom_widgets.themedbutton.ThemedButton
-#: import ThemedButtonText src.custom_widgets.themedbuttontext.ThemedButtonText
-
 <HomeScreen>:
     name: "home"
+    md_bg_color: self.theme_cls.backgroundColor
 
     CustomTopAppBar:
         CustomTopAppBarTitle:
@@ -31,11 +29,9 @@
 
 
             ThemedButton:
+                style: "outlined"
                 theme_width: "Custom"
                 size_hint_x: .94
-                background_colors: {'Light': (0,0,0,1), 'Dark': (1,1,1,1)}
-
-                style: "outlined"
 
                 height: dp(52)
                 radius: root._button_radius
@@ -45,18 +41,16 @@
                 on_release: print("MDButton-1")
 
                 ThemedButtonText:
-                    text_colors: {'Light': (1, 1, 1, 1), 'Dark': (0,0,0,1)}
                     text: "Romaneio Toda Largura"
                     bold: True
-
+                    text_colors: app.custom_theme_style.text_color_secondary
                     pos_hint: {'center_x': 0.5, "center_y": 0.5}
 
 
             ThemedButton:
+                style: "outlined"
                 theme_width: "Custom"
                 size_hint_x: .94
-
-                style: "outlined"
 
                 height: dp(52)
                 radius: root._button_radius
@@ -73,10 +67,9 @@
 
 
             ThemedButton:
+                style: "outlined"
                 theme_width: "Custom"
                 size_hint_x: .94
-
-                style: "outlined"
 
                 height: dp(52)
                 radius: root._button_radius
@@ -86,10 +79,7 @@
                 on_release: print("MDButton-1")
 
                 ThemedButtonText:
-                    text: "Estoque"
-                    
+                    text: "Estoque"                    
                     bold: True
 
                     pos_hint: {'center_x': 0.5, "center_y": 0.5}
-
-           

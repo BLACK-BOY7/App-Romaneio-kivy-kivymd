@@ -2,7 +2,7 @@ from kivy.lang import Builder
 from kivymd.uix.screenmanager import MDScreenManager
 
 # custom imports...
-from src.custom_widgets.appbar import  CustomTopAppBar
+from .custom.widgets.appbar import CustomTopAppBar
 
 Builder.load_file("src/mainscreenmanager.kv")
 
