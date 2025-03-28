@@ -2,8 +2,6 @@ from kivy.lang import Builder
 from kivy.metrics import dp
 from kivymd.uix.screen import MDScreen
 
-from ..customeventdispatcher.themedwidget import ThemedWidget
-
 from kivy.properties import (
     NumericProperty, StringProperty, AliasProperty, ReferenceListProperty,
     ObjectProperty, VariableListProperty, DictProperty, BooleanProperty)

@@ -1,3 +1,6 @@
+#: import ThemedButton src.custom_widgets.themedbutton.ThemedButton
+#: import ThemedButtonText src.custom_widgets.themedbuttontext.ThemedButtonText
+
 <HomeScreen>:
     name: "home"
 
@@ -27,10 +30,11 @@
             pos_hint: {'center_x': 0.5,'center_y': 0.5}
 
 
-            MDButton:
+            ThemedButton:
                 theme_width: "Custom"
                 size_hint_x: .94
-                
+                background_colors: {'Light': (0,0,0,1), 'Dark': (1,1,1,1)}
+
                 style: "outlined"
 
                 height: dp(52)
@@ -40,16 +44,15 @@
 
                 on_release: print("MDButton-1")
 
-                MDButtonText:
-                    theme_text_color: "Primary"
+                ThemedButtonText:
+                    text_colors: {'Light': (1, 1, 1, 1), 'Dark': (0,0,0,1)}
                     text: "Romaneio Toda Largura"
                     bold: True
-
 
                     pos_hint: {'center_x': 0.5, "center_y": 0.5}
 
 
-            MDButton:
+            ThemedButton:
                 theme_width: "Custom"
                 size_hint_x: .94
 
@@ -62,17 +65,14 @@
 
                 on_release: app.root.change_screen("romaneios-bitolado")
 
-                MDButtonText:
+                ThemedButtonText:
                     text: "Romaneio Bitolado"
-
                     bold: True
-                    theme_text_color: "Custom"
-                    text_color: "white"
 
                     pos_hint: {'center_x': 0.5, "center_y": 0.5}
 
 
-            MDButton:
+            ThemedButton:
                 theme_width: "Custom"
                 size_hint_x: .94
 
@@ -85,12 +85,10 @@
 
                 on_release: print("MDButton-1")
 
-                MDButtonText:
+                ThemedButtonText:
                     text: "Estoque"
                     
                     bold: True
-                    theme_text_color: "Custom"
-                    text_color: "white"
 
                     pos_hint: {'center_x': 0.5, "center_y": 0.5}
 

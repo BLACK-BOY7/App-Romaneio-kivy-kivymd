@@ -1,28 +1,26 @@
 from kivymd.app import MDApp
 from kivy.core.window import Window
-
+from src.custom_widgets.themedbutton import ThemedButton
+from src.custom_widgets.themedbuttontext import ThemedButtonText
 
 # custom import ...
 from src.mainscreenmanager import MainScreenManager
 
-
 class AppRomaneio(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.register_event_type("on_theme_change")  # Cria o evento global
 
     def build(self):
         return MainScreenManager()
 
     def change_theme(self):
-        """Função chamada pelos botões para alterar o tema."""
-        self.theme_cls.theme_style = "Light" if self.theme_cls.theme_style == "Dark" else "Dark"
-        self.dispatch("on_theme_change", self.theme_cls.theme_style)  # Dispara o evento global
+        self.theme_cls.theme_style = "Dark" if self.theme_cls.theme_style == "Light" else "Light"
 
-    def on_theme_change(self, theme):
-        """Evento chamado automaticamente quando o tema muda."""
-        # print(f"[MainApp] Tema alterado para: {theme}")
-            
+        for button in ThemedButton.buttons:
+            button.on_theme_changed()
+
+        for text in ThemedButtonText.texts:
+            text.on_theme_changed()
 
 if __name__ == "__main__":
     
