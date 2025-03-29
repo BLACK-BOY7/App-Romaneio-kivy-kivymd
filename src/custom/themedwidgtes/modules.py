@@ -1,9 +1,12 @@
-from .themedcard import ThemedCard
+from .themedicon import ThemedIcon
 from .themedbutton import ThemedButton
 from .themedbuttontext import ThemedButtonText
+from .themedbuttonicon import ThemedButtonIcon
+
 
 __modules__ = (
-    ThemedCard,
+    ThemedIcon,
     ThemedButton,
-    ThemedButtonText
+    ThemedButtonText,
+    ThemedButtonIcon,
 )

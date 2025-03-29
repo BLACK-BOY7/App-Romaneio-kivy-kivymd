@@ -1,12 +1,9 @@
 from kivy.lang import Builder
 from kivy.metrics import dp
-from kivymd.uix.card import MDCard
-
-from kivymd.uix.button import MDButton
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.list import MDList, MDListItem
-from kivymd.uix.scrollview import MDScrollView
 
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.list import MDList, MDListItem
 
 from kivy.properties import (
     NumericProperty, StringProperty, AliasProperty, ReferenceListProperty,
@@ -23,11 +20,11 @@ class RomaneiosWidgets(MDList):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         
-        for index in range(20):
+        for index in range(5):
             self.add_widget(RomaneioWidgetInfo())
 
 class RomaneioWidgetInfo(MDListItem):
     ...
 
-class RomaneioWidgetFilter(MDCard):
+class RomaneioWidgetFilter(MDBoxLayout):
     _radius = VariableListProperty([dp(4), dp(4), dp(4), dp(4)])
