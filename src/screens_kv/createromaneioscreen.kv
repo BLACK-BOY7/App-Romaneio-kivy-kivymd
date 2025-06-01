@@ -13,10 +13,12 @@
             bold: True
 
     MDAnchorLayout:
+        id: anchor_layout
         anchor_x: "center"
         anchor_y: "center"
 
         MDBoxLayout:
+            id: box_layout
             orientation: "vertical"
             
             padding: dp(4)
@@ -26,6 +28,7 @@
             pos_hint: {"center_x": 0.5,"center_y": 0.5}
 
             MDTextField:
+                id: text_field_client
                 mode: "outlined"
 
                 MDTextFieldLeadingIcon:
@@ -35,6 +38,7 @@
                     text: "Nome do cliente"
                     
             MDTextField:
+                id: text_field_motorist
                 mode: "outlined"
 
                 MDTextFieldLeadingIcon:
@@ -44,6 +48,7 @@
                     text: "Nome do motorista"
 
             MDTextField:
+                id: text_field_wood
                 mode: "outlined"
 
                 MDTextFieldLeadingIcon:
@@ -53,6 +58,7 @@
                     text: "Espécie de madeira"
 
             ThemedButton:
+                id: themed_button_create
                 radius: dp(8)
 
                 theme_height: "Custom"

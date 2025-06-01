@@ -27,6 +27,7 @@
         ScrollView:
             effect_cls: "ScrollEffect"
             RomaneiosWidgets:
+                id: romaneio_widgets
 
     ThemedButton:
         style: "elevated"
@@ -55,13 +56,13 @@
         icon: "notebook-edit"
 
     MDListItemHeadlineText:
-        text: "Andrey"
+        text: root.client_name
 
     MDListItemSupportingText:
-        text: "Maçaranduba"
+        text: root.wood_type
 
     MDListItemTertiaryText:
-        text: "10/05/2085"
+        text: root.creatin_date
 
     MDListItemTrailingIcon:
         icon: "chevron-right"
